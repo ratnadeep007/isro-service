@@ -7,7 +7,12 @@ const { typeDefs, resolvers } = require('./graphql');
 
 mongoose.connect(config.MONGODB, { useNewUrlParser: true });
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ 
+  typeDefs, 
+  resolvers,
+  introspection: true,
+  playground: true
+});
 
 const app = express();
 server.applyMiddleware({ app });
