@@ -1,0 +1,25 @@
+{
+  "name": "isro-api-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Ratnadeep Bhattacharyya",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.9.6",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  }
+}
