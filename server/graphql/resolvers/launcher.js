@@ -36,10 +36,10 @@ const launcherResolvers = {
       context, 
       info
     ) => {
+      console.log()
       try {
         const newLaunch = await launcher.create({
-          title, shortDescription, longDescription, launches,
-          height, diameter, numberOfStages, liftOfMass, variants, variantsList, firstFlight
+          title, shortDescription, longDescription, launches, height, diameter, numberOfStages, liftOfMass, variants, variantsList, firstFlight
         });
         return newLaunch;
       } catch (err) {

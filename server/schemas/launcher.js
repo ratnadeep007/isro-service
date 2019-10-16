@@ -19,7 +19,7 @@ var LauncherSchema = new mongoose.Schema({
   }],
   height: Number,
   diameter: Number,
-  numberOfStage: Number,
+  numberOfStages: Number,
   liftOfMass: Number,
   variants: Number,
   variantsList: [String],
