@@ -4,7 +4,15 @@ const launcherType =  /* GraphQL */`
     title: String!,
     shortDescription: String,
     longDescription: String,
-    launches: [Launch]
+    launches: [Launch],
+    height: Float,
+    diameter: Float,
+    numberOfStages: Float,
+    liftOfMass: Float,
+    variants: Int,
+    variantsList: [String],
+    firstFlight: Date,
+    stages: [Stage]
   }
 `;
 

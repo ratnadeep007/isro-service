@@ -4,6 +4,13 @@ const launcherMutation = /* GraphQL */`
     shortDescription: String, 
     longDescription: String, 
     launches: [String]
+    height: Float,
+    diameter: Float,
+    numberOfStages: Float,
+    liftOfMass: Float,
+    variants: Int,
+    variantsList: [String],
+    firstFlight: Date,
   ): Launcher!,
   launcherUpdate(
     title: String!,

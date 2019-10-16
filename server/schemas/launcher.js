@@ -1,6 +1,5 @@
 // @ts-nocheck
 const mongoose = require('mongoose');
-const Launch = require('./launch');
 
 var LauncherSchema = new mongoose.Schema({
   title: {
@@ -17,6 +16,17 @@ var LauncherSchema = new mongoose.Schema({
   launches: [{
     type: mongoose.SchemaTypes.ObjectId,
     ref: 'Launches'
+  }],
+  height: Number,
+  diameter: Number,
+  numberOfStage: Number,
+  liftOfMass: Number,
+  variants: Number,
+  variantsList: [String],
+  firstFlight: Date,
+  stages: [{
+    type: mongoose.SchemaTypes.ObjectId,
+    ref: 'Stages'
   }],
   metadata: {
     createdOn: {

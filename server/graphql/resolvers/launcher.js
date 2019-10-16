@@ -17,7 +17,7 @@ const launcherResolvers = {
       }
       console.log(args);
       try {
-        const foundLaunch = await launcher.find(query).populate('launches');
+        const foundLaunch = await launcher.find(query).populate('launches').populate('stages');
         console.log(foundLaunch);
         if (!foundLaunch || !foundLaunch.length) {
           throw new Error('No lauches added');

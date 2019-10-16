@@ -1,9 +1,9 @@
 const { makeExecutableSchema } = require('apollo-server-express');
 const { merge } = require('lodash');
-const { launchType, launcherType } = require('./schemas');
+const { launchType, launcherType, stageType } = require('./schemas');
 const queries = require('./queries');
 const muatations = require('./mutations');
-const { launchResolvers, launcherResolvers } = require('./resolvers');
+const { launchResolvers, launcherResolvers, stageResolvers } = require('./resolvers');
 
 // export const schemas = makeExecutableSchema({
 //   typeDefs: [userType, userQuery],
@@ -11,6 +11,6 @@ const { launchResolvers, launcherResolvers } = require('./resolvers');
 // });
 
 module.exports = {
-  typeDefs: [queries, launchType, launcherType, muatations],
-  resolvers: [launchResolvers, launcherResolvers]
+  typeDefs: [queries, launchType, launcherType, stageType, muatations],
+  resolvers: [launchResolvers, launcherResolvers, stageResolvers]
 }
