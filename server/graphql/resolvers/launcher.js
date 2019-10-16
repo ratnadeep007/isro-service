@@ -32,13 +32,14 @@ const launcherResolvers = {
   Mutation: {
     launcher: async (
       parent, 
-      {title, shortDescription, longDescription, launches}, 
+      {title, shortDescription, longDescription, launches, height, diameter, numberOfStages, liftOfMass, variants, variantsList, firstFlight}, 
       context, 
       info
     ) => {
       try {
         const newLaunch = await launcher.create({
-          title, shortDescription, longDescription, launches
+          title, shortDescription, longDescription, launches,
+          height, diameter, numberOfStages, liftOfMass, variants, variantsList, firstFlight
         });
         return newLaunch;
       } catch (err) {
