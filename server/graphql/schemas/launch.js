@@ -8,6 +8,8 @@ const launchType =  /* GraphQL */`
     successful: Boolean,
     remark: String,
     description: String
+    launcherType: String
+    orbit: String
   }
 `;
 

@@ -28,6 +28,8 @@ var LaunchSchema = new mongoose.Schema({
   description: {
     type: String
   },
+  launcherType: String,
+  orbit: String,
   metadata: {
     createdOn: {
       type: Date,

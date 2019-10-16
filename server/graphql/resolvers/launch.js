@@ -45,12 +45,12 @@ const launchResolvers = {
   Mutation: {
     launch: async (
       parent, 
-      {title, launchDate, type, payload, successful, remark, description}, 
+      {title, launchDate, type, payload, successful, remark, description, launcherType, orbit},
       context, 
       info
     ) => {
       const newLaunch = await launch.create({
-        title, launchDate, type, payload, successful, remark, description
+        title, launchDate, type, payload, successful, remark, description, launcherType, orbit
       });
       let launcherFound = await launcher.findOne({ _id: type });
       launcherFound = launcherFound.toObject();
